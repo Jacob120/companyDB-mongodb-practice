@@ -60,15 +60,6 @@ router.put('/departments/:id', async (req, res) => {
   }
 });
 
-// router.delete('/departments/:id', (req, res) => {
-//   req.db
-//     .collection('departments')
-//     .deleteOne({ _id: ObjectId(req.params.id) }, (err) => {
-//       if (err) res.status(500).json({ message: err });
-//       else res.json({ message: 'OK' });
-//     });
-// });
-
 router.delete('/departments/:id', async (req, res) => {
   try {
     const dep = await Department.findById(req.params.id);
