@@ -149,7 +149,7 @@ describe('Employee', () => {
       expect(employees.length).to.be.equal(0);
     });
 
-    after(async () => {
+    afterEach(async () => {
       await Employee.deleteMany();
     });
   });
